@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://o86o26rpt2lm"]
+
+[ext_resource type="Script" path="res://RigidBody2D.gd" id="1_n86ik"]
+[ext_resource type="Texture2D" uid="uid://d3gvafsl25tyr" path="res://Sprite/Namnlös.png" id="2_dlfi5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0m8g"]
+size = Vector2(48.8661, 45.8922)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" type="CharacterBody2D" parent="."]
+scale = Vector2(5.48438, 4.51057)
+script = ExtResource("1_n86ik")
+
+[node name="Mark" type="Sprite2D" parent="RigidBody2D"]
+position = Vector2(-2.86102e-06, -0.221702)
+scale = Vector2(0.764957, 0.714773)
+texture = ExtResource("2_dlfi5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(1.2666e-06, -1.11759e-06)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_i0m8g")
